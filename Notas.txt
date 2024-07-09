@@ -1,0 +1,6 @@
+4 Recursos
+https://github.com/mouredev/hello-git
+https://mouredev.com/discord
+https://www.twitch.tv/mouredev
+https://retosdeprogramacion.com/
+https://git-scm.com/book/es/v2

@@ -1,6 +1,55 @@
+
 4 Recursos
 https://github.com/mouredev/hello-git
 https://mouredev.com/discord
 https://www.twitch.tv/mouredev
 https://retosdeprogramacion.com/
 https://git-scm.com/book/es/v2
+
+COMANDOS CONSOLA
+
+ls 
+    Lista directorios en path actual
+cd
+    Change directoriy
+pwd
+    Muestra path actual
+mkdir
+    Crea un directorio nuevo
+clear
+    Limpia consola
+
+
+
+COMANDOS GIT
+
+git
+|
+|-  -v
+|        Muestra version de git
+|-  -h
+|       Help
+|-  config
+|   |
+|   |-  -l 
+|   |       Lista configuraciones
+|   |-  --global
+|       |   Configuracion de todo el sistema
+|       |
+|       |-  user.name "name"
+|       |       Cambia el nombre asignado a git
+|       |-  user.email "email"
+|               Cambia el email asignado a git
+|
+|-  status
+|       Devuelve el estado del repositorio. Archivos nuevos, editados, eliminados.
+|-  add file.ext
+|       Añade ficheros al stage
+|-  commit -m "mensaje"
+|       Crea una nueva "fotografia" del stage
+|-  log
+|      muestra un listado de los commits que se han hecho hasta el momento 
+|-  checkout file.ext
+|       Devuelve un fichero a su estado en el ultimo commit
+|-  reset
+        Muestra los ficheros que se han cambiado y es necesario resetear para volver a la forma del ultimo commit

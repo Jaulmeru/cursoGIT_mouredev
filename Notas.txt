@@ -1,55 +1,87 @@
 
 4 Recursos
-https://github.com/mouredev/hello-git
-https://mouredev.com/discord
-https://www.twitch.tv/mouredev
-https://retosdeprogramacion.com/
-https://git-scm.com/book/es/v2
+    https://github.com/mouredev/hello-git
+    https://mouredev.com/discord
+    https://www.twitch.tv/mouredev
+    https://retosdeprogramacion.com/
+    https://git-scm.com/book/es/v2
 
 COMANDOS CONSOLA
+    ls 
+        Lista directorios en path actual
+    cd
+        Change directoriy
+    pwd
+        Muestra path actual
+    mkdir
+        Crea un directorio nuevo
+    clear
+        Limpia consola
 
-ls 
-    Lista directorios en path actual
-cd
-    Change directoriy
-pwd
-    Muestra path actual
-mkdir
-    Crea un directorio nuevo
-clear
-    Limpia consola
-
-
+ARCHIVOS .git
+    .gitignore
+        Donde colocaremos lo que queremos que git no tome en cuenta para nada
+        **/file.ext     Ignora todos los archivos llamados file.ext en cualquier directorio
 
 COMANDOS GIT
+    -v
+        Muestra version de git
+    -h
+        Help
+    config
+        -l 
+            Lista configuraciones
+        --global
+            Configuracion de todo el sistema
+            user.name "name"
+                Cambia el nombre asignado a git
+            user.email "email"
+                Cambia el email asignado a git
+            alias.<alias> "comando"
+                    Guarda un comando para utilizarlo rapidamente
+    status
+        Devuelve el estado del repositorio. Archivos nuevos, editados, eliminados.
+    add 
+        file.ext
+            Añade un fichero al stage
+        .
+            Añade todos los pendientes al stage
+    commit -m "mensaje"
+        Crea una nueva "fotografia" del stage
+    log
+        Muestra un listado de los commits que se han hecho hasta el momento 
+    checkout 
+        file.ext
+            Devuelve un fichero a su estado en el ultimo commit
+        <hash>
+                Vuelve a un commit diferente colocandole el HEAD
+        reset
+            Muestra los ficheros que se han cambiado y es necesario resetear para volver a la forma del ultimo commit
+        --hard <hash>
+                Regresa al commit solicitado y "elimina" los posteriores commits del branch
+    diff
+        Muestra los cambios hechos que no se han mandado a commit
+    tag
+        Muestra la lista de tags en el repositorio  
+        <tag_name>
+            Crea un tag en el commit actual que puede reemplazar el uso del hash
+    branch <nombre_rama>
+        Crea una rama nueva en el commit actual
+    switch <nombre_rama>
+        Cambia entre ramas
+    merge <nombre_rama>
+        Une una rama en la rama actual creando al momento un nuevo commit
+        (Cuidado con los conflictos)
+    stash
+        Guarda los cambios actuales sin generar un commit para poder desplazarnos en el repositorio y seguir trabajando luego
+        list
+            Muestra una lista de stashs "WIP" que tenemos pendientes
+        pop
+            Devuelve lo guardado en el stash
+        drop
+            Elimina el contenido del stash
 
-git
-|
-|-  -v
-|        Muestra version de git
-|-  -h
-|       Help
-|-  config
-|   |
-|   |-  -l 
-|   |       Lista configuraciones
-|   |-  --global
-|       |   Configuracion de todo el sistema
-|       |
-|       |-  user.name "name"
-|       |       Cambia el nombre asignado a git
-|       |-  user.email "email"
-|               Cambia el email asignado a git
-|
-|-  status
-|       Devuelve el estado del repositorio. Archivos nuevos, editados, eliminados.
-|-  add file.ext
-|       Añade ficheros al stage
-|-  commit -m "mensaje"
-|       Crea una nueva "fotografia" del stage
-|-  log
-|      muestra un listado de los commits que se han hecho hasta el momento 
-|-  checkout file.ext
-|       Devuelve un fichero a su estado en el ultimo commit
-|-  reset
-        Muestra los ficheros que se han cambiado y es necesario resetear para volver a la forma del ultimo commit
+        
+*Correccion de conflictos*
+    Al querer hacer un merge si se han cambiado lineas de codigo que generen discrepancias 
+    con lo que se quiere mezclar, hay que hacer cambios en un commit para decidir que el lo que se quedara

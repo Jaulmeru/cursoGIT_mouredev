@@ -61,12 +61,16 @@ COMANDOS GIT
                 Regresa al commit solicitado y "elimina" los posteriores commits del branch
     diff
         Muestra los cambios hechos que no se han mandado a commit
+        <rama>
+            Muestra lo que tiene de diferente una rama respecto a la actual
     tag
         Muestra la lista de tags en el repositorio  
         <tag_name>
             Crea un tag en el commit actual que puede reemplazar el uso del hash
     branch <nombre_rama>
         Crea una rama nueva en el commit actual
+        -d <nombre_rama>
+            Elimina la referencia de la rama, por lo que no se puede acceder directamente, sin embargo los hash no son eliminados
     switch <nombre_rama>
         Cambia entre ramas
     merge <nombre_rama>
